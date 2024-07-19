@@ -3,16 +3,15 @@
     justify-content: center;
     align-items: center;
     padding: 20px; 
-  }
+
   
   .addTask {
-    position: relative;
     height: 45px;
     bottom: -123px;
     width: 80%;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 20px;
     justify-content: center;
   }
   
@@ -89,4 +88,4 @@
             height: 100%;
       }
   }
-  
+}

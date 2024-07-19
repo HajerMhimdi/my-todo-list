@@ -9,8 +9,7 @@ import './style.css'
 
 function Task({ task, onDelete, onComplete }) {
   return (
-    <div className='container'>
-
+    <>
     <div className="task">
 
       <p className={task.isCompleted ? "textCompleted" : ""}>
@@ -25,7 +24,8 @@ function Task({ task, onDelete, onComplete }) {
         delete
       </Button>
     </div>
-    </div>
+  
+    </>
   )
 }
 

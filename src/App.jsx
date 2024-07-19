@@ -63,6 +63,7 @@ function App() {
       <Heading  tasks={tasks} />
 
       <Index handleAddTask={addTask}/>
+      
       <TaskList  tasks={tasks}
         onDelete={deleteTaskById}
         onComplete={CompleteTasksById} />

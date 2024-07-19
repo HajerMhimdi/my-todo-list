@@ -13,20 +13,16 @@ function TaskList({ tasks, onDelete, onComplete }) {
   return (
     <>
 
-      <div className='container'>
         <section className="tasks">
-         
-      <div className='container'>
-        <div className="list">
-          {tasks.map((task) => (
-            <Task key={task.id} task={task} onDelete={onDelete} onComplete={onComplete} />
-          
-          ))}
-        </div>
-      </div>
+
+          <div className="list">
+            {tasks.map((task) => (
+              <Task key={task.id} task={task} onDelete={onDelete} onComplete={onComplete} />
+
+            ))}
+          </div>
 
         </section>
-      </div>
     </>
 
   )
