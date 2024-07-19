@@ -1,5 +1,5 @@
   .list {
-    display: grid;
+    display: flex;
     flex-direction: column;
     gap: 10px;
     background-color: #f4f4f4;
@@ -7,6 +7,8 @@
     padding: 16px;
     position: relative;
     max-height: 400px;
+    padding-bottom: 2px;
+    gap: 8px;
   }
 
   .emptyTasks{

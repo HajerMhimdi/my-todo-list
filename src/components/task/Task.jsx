@@ -7,10 +7,16 @@ import './style.css'
 
 function Task({ task, onDelete, onComplete }) {
   return (
-    <>
+ 
    <div className="task">
+    
       <p className={task.isCompleted ? "textCompleted" : ""}>
-        {task.title} {task.description}
+       <div className='rowDirection'>
+        <h2 className="titleStyle">{task.title} </h2> 
+    </div>
+    <div className='rowDirection'>
+    <h4>Description:  {task.description} </h4>
+    </div>
       </p>
       {task.isCompleted ? (
         <TaskIcon className='checkedButton' onClick={() => onComplete(task.id)} />
@@ -18,10 +24,11 @@ function Task({ task, onDelete, onComplete }) {
         <TaskIcon className='notCheckedButton' onClick={() => onComplete(task.id)} />
       )}
       <DeleteForeverIcon className="deleteButton" onClick={() => onDelete(task.id)} />
-    </div>
+    </div> 
+
+
+  )  
   
-    </>
-  )
 }
 
 export default Task

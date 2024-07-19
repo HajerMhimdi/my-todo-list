@@ -29,15 +29,6 @@ function Index({handleAddTask}) {
      }
    }
 
-  // function handleSubmit(event) {
-  //   event.preventDefault();
-
-  //   handleAddTask(title,description);
-  //   setTitle('');
-   
-  //   setDescription('');
-  // }
-
 
   function onChangeTitle(event) {
     setTitle(event.target.value);
