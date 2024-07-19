@@ -1,20 +1,19 @@
 
   .task {
-    height: 100%;
-    background: #131313;
-    border: 1px solid #333333;
-    padding: 16px;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: #ffffff;
+    border: 2px solid #008787;
+    padding: 16px;
+    border-radius: 8px;
     gap: 4rem;
   }
 
   .task p {
     font-size: 14px;
     line-height: 19px;
-    color: #F2F2F2;
+    color: #008787;
     margin-right: auto;
   }
 
