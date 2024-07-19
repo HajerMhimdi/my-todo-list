@@ -16,5 +16,14 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    color: #008787;
+    color: #bcbcbc;
+  }
+
+  @media (max-width: 576px) {
+
+    .emptyTasks {
+      font-size: 1.3rem;
+    }
+  
+  
   }

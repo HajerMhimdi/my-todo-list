@@ -13,3 +13,15 @@
 }
 
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #F2F2F2;
+  min-height: 100vh;
+  overflow: hidden;
+
+}

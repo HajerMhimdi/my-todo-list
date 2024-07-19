@@ -1,81 +1,109 @@
 .header {
-    background: #1E6F9F;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    height: 100px;
-    color: white;
-    font-size: 2rem; 
-        gap: 20px;
+  background: #f4f4f4;
+  display: flex;
+  align-items: center;  /* Use center instead of normal */
+  justify-content: space-between;
+  height: 100px;
+  color: #008787;
+  font-size: 2rem;
+  padding: 14px;
+  height: 60px;
+}
+
+.toDoTitle {
+  color: #008787;
+  font-size: 2.5rem;  /* Adjust size for better scaling */
+  font-weight: bold;
+}
+
+.completedTasks {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+.iconWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.createTasks, .completeTask {
+  font-size: 40px;
+}
+
+.notification {
+  position: absolute;
+  right: -10px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.completedText {
+  position: absolute;
+  right: -10px;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1200px) {
+
+  .toDoTitle {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 992px) {
+  
+  .toDoTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    height: 60px;
+    font-size: xx-large;
 
   }
+  .toDoTitle {
+    font-size: 1.75rem;
+  }
+  .notification {
+   
+    font-size: xx-large;
+    
+  }
+  
+  .completedText {
 
-  .completedTasks{
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    color: white;
+    font-size: xx-large;
+  
   }
 
-  .subTitle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #1E6F9F;
-    font-size: 2rem; 
-  }
-  
 
-  
-  .header > div {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+}
+
+@media (max-width: 576px) {
+
+  .toDoTitle {
+    font-size: 1.5rem;
   }
-  
-  .header p {
-    color: #4EA8DE;
-    font-size: 14px;
-    font-weight: 700;
-  }
-  
-  .textPurple {
-    color: #8284FA !important;
-  }
-  
-  .header span {
-    background: #333333;
-    color: #D9D9D9;
-    padding: 3px 9px;
-    border-radius: 999px;
-    font-size: 12px;
-    font-weight: 700;
-  }
-  @media (max-width: 1200px) {
-    .header {
-      height: 80px;
-      font-size: 1.75rem;
-    }
-  }
-  
-  @media (max-width: 992px) {
-    .header {
-      height: 70px;
-      font-size: 1.5rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .header {
-      height: 60px;
-      font-size: 1.25rem;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .header {
-      height: 50px;
-      font-size: 1rem;
-    }
-  }
-  
+
+
+}
+
+.header span {
+  background: #333333;
+  color: #D9D9D9;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}

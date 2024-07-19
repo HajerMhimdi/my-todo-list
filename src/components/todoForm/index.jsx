@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import Button from '@mui/material/Button';
 import AddTaskIcon from '@mui/icons-material/AddTask';
-
+import Tooltip from '@mui/material/Tooltip';
 import './style.css'
 
 
@@ -51,7 +51,13 @@ function Index({handleAddTask}) {
       <input placeholder="Add a description" type="text" onChange={onChangeDescription} value={description} className={errors.description ? 'error' : ''}  />
       {errors.description && <div className="error-message">{errors.description}</div>}
 
+      <Tooltip title={'Add New Task'}>
+
       <Button variant="contained" type="submit" className="submitButton"><AddTaskIcon /></Button>
+
+
+      </Tooltip>
+
       </form>
     </div>
 
