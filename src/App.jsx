@@ -4,7 +4,7 @@ import Heading from './components/header/heading.jsx'
 import Index from './components/todoForm/index.jsx'
 import TaskList from './components/todoList/TasksList.jsx'
 
-import './App.css'
+
 
 
 const LOCAL_STORAGE_KEY = 'todo:tasks';
@@ -30,10 +30,10 @@ function App() {
   }
 
 
-  function addTask(taskTitle) {
+  function addTask(newTask) {
     setSavedTasks([...tasks, {
       id: crypto.randomUUID(),
-      title: taskTitle,
+      title: newTask,
       isCompleted: false
     }]);
   }
@@ -60,13 +60,14 @@ function App() {
     <>
 
     
-      <Heading />
+      <Heading  tasks={tasks} />
 
       <Index handleAddTask={addTask}/>
-
       <TaskList  tasks={tasks}
         onDelete={deleteTaskById}
         onComplete={CompleteTasksById} />
+        
+
 
     </>
 

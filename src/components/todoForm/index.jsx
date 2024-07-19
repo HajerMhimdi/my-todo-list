@@ -6,7 +6,6 @@ import Button from '@mui/material/Button';
 import './style.css'
 
 
-
 function Index({handleAddTask}) {
   const [title, setTitle] = useState('');
 
@@ -27,7 +26,7 @@ function Index({handleAddTask}) {
     <div className='container'>
       <form onSubmit={handleSubmit} className="addTask">
         <input placeholder="Add a new task" type="text" onChange={onChangeTitle} value={title} />
-        <Button variant="contained"><AddBoxIcon /> Add </Button>
+        <Button variant="contained" type="submit"><AddBoxIcon /> Add </Button>
       </form>
     </div>
 

@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Added padding for better responsiveness */
+    padding: 20px; 
   }
   
   .addTask {
@@ -64,13 +64,9 @@
   @media (max-width: 768px) {
     .addTask {
       gap: 6px;
-      bottom: -100px; /* Adjust bottom position */
+      bottom: -100px; 
     }
-  
-    /* .addTask input, .addTask button {
-      width: 30%;
-      font-size: 14px;
-    } */
+
   }
   
   @media (max-width: 360px) {
@@ -78,7 +74,7 @@
         flex-direction: column;
 
         gap: 6px;
-        bottom: -100px; /* Adjust bottom position */
+        bottom: -100px; 
       }
     
       .addTask input {

@@ -2,9 +2,26 @@
     background: #1E6F9F;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     height: 100px;
     color: white;
+    font-size: 2rem; 
+        gap: 20px;
+
+  }
+
+  .completedTasks{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: white;
+  }
+
+  .subTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1E6F9F;
     font-size: 2rem; 
   }
   
