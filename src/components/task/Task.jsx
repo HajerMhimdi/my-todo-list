@@ -14,6 +14,7 @@ function Task({ task, onDelete, onComplete }) {
 
       <p className={task.isCompleted ? "textCompleted" : ""}>
         {task.title}
+        {task.description}
       </p>
       <Button variant="contained" className="checkContainer" onClick={() => onComplete(task.id)}>
         {task.isCompleted ? 'check' : <div />}

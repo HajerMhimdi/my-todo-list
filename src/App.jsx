@@ -30,10 +30,11 @@ function App() {
   }
 
 
-  function addTask(newTask) {
+  function addTask(newTitle, newDescription) {
     setSavedTasks([...tasks, {
       id: crypto.randomUUID(),
-      title: newTask,
+      title: newTitle,
+      description: newDescription,
       isCompleted: false
     }]);
   }
@@ -62,8 +63,8 @@ function App() {
     
       <Heading  tasks={tasks} />
 
-      <Index handleAddTask={addTask}/>
-      
+      <Index handleAddTask={addTask} />
+
       <TaskList  tasks={tasks}
         onDelete={deleteTaskById}
         onComplete={CompleteTasksById} />

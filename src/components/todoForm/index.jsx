@@ -1,6 +1,5 @@
 import React from 'react'
-import AddBoxIcon from '@mui/icons-material/AddBox';
-import { useState } from 'react';
+import SendIcon from '@mui/icons-material/Send';import { useState } from 'react';
 import Button from '@mui/material/Button';
 
 import './style.css'
@@ -8,25 +7,33 @@ import './style.css'
 
 function Index({handleAddTask}) {
   const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
 
 
   function handleSubmit(event) {
     event.preventDefault();
 
-    handleAddTask(title);
+    handleAddTask(title,description);
     setTitle('');
+   
+    setDescription('');
   }
 
   function onChangeTitle(event) {
     setTitle(event.target.value);
   }
 
+  function onChangeDescription(event) {
+    setDescription(event.target.value);
+  }
+
   return (
 <>
     <div className='container'>
       <form onSubmit={handleSubmit} className="addTask">
-        <input placeholder="Add a new task" type="text" onChange={onChangeTitle} value={title} />
-        <Button variant="contained" type="submit"><AddBoxIcon /> Add </Button>
+      <input placeholder="Add a title" type="text" onChange={onChangeTitle} value={title} />
+      <input placeholder="Add a description" type="text" onChange={onChangeDescription} value={description} />
+        <Button variant="contained" type="submit" className="submitButton"><SendIcon /></Button>
       </form>
     </div>
 

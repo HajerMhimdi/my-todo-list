@@ -1,10 +1,10 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
 
-  
+
   .addTask {
     height: 45px;
     bottom: -123px;
@@ -14,7 +14,7 @@
     gap: 20px;
     justify-content: center;
   }
-  
+
   .addTask input {
     height: 100%;
     flex: 1;
@@ -25,15 +25,15 @@
     padding: 0 16px;
     font-size: 16px;
   }
-  
+
   .addTask input::placeholder {
     color: #ffffff;
   }
-  
+
   .addTask button {
     height: 100%;
     padding: 0 16px;
-    background: #1E6F9F;
+    background:  #008787;
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -43,49 +43,52 @@
     font-weight: 700;
     font-size: 14px;
   }
-  
+
+
   @media (max-width: 1200px) {
     .addTask {
       width: 90%;
     }
   }
-  
+
   @media (max-width: 992px) {
     .addTask {
       width: 95%;
     }
-  
-    .addTask input, .addTask button {
+
+    .addTask input,
+    .addTask button {
       font-size: 14px;
     }
   }
-  
+
   @media (max-width: 768px) {
     .addTask {
       gap: 6px;
-      bottom: -100px; 
+      bottom: -100px;
     }
 
   }
-  
+
   @media (max-width: 360px) {
     .addTask {
-        flex-direction: column;
+      flex-direction: column;
 
-        gap: 6px;
-        bottom: -100px; 
-      }
-    
-      .addTask input {
+      gap: 6px;
+      bottom: -100px;
+    }
 
-        width: 100%;
-        height: 100%;
-        font-size: 16px;
+    .addTask input {
 
-        }
-        .addTask button{
-            width: 25%;
-            height: 100%;
-      }
+      width: 100%;
+      height: 100%;
+      font-size: 16px;
+
+    }
+
+    .addTask button {
+      width: 25%;
+      height: 100%;
+    }
   }
 }
