@@ -6,7 +6,7 @@
     overflow-y: auto;
     padding: 16px;
     position: relative;
-    max-height: 400px;
+    max-height: 210px;
     padding-bottom: 2px;
     gap: 8px;
   }

@@ -15,7 +15,7 @@ function Task({ task, onDelete, onComplete }) {
           <h2 className="titleStyle">{task.title}</h2>
         </div>
         <div className='rowDirection'>
-          <h4>Description: {task.description}</h4>
+          <h5 >Description: {task.description}</h5>
         </div>
       </p>
       {task.isCompleted ? (
