@@ -1,29 +1,23 @@
 import React from 'react'
-import Button from '@mui/material/Button';
+import TaskIcon from '@mui/icons-material/Task';
+import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 
 import './style.css'
-
-
-
 
 
 function Task({ task, onDelete, onComplete }) {
   return (
     <>
-    <div className="task">
-
+   <div className="task">
       <p className={task.isCompleted ? "textCompleted" : ""}>
-        {task.title}
-        {task.description}
+        {task.title} {task.description}
       </p>
-      <Button variant="contained" className="checkContainer" onClick={() => onComplete(task.id)}>
-        {task.isCompleted ? 'check' : <div />}
-      </Button>
-
-      <Button variant="contained" className="deleteButton" onClick={() => onDelete(task.id)}>
-       
-        delete
-      </Button>
+      {task.isCompleted ? (
+        <TaskIcon className='checkedButton' onClick={() => onComplete(task.id)} />
+      ) : (
+        <TaskIcon className='notCheckedButton' onClick={() => onComplete(task.id)} />
+      )}
+      <DeleteForeverIcon className="deleteButton" onClick={() => onDelete(task.id)} />
     </div>
   
     </>

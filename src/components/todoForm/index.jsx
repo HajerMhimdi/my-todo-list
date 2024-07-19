@@ -1,6 +1,7 @@
 import React from 'react'
-import SendIcon from '@mui/icons-material/Send';import { useState } from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
+import AddTaskIcon from '@mui/icons-material/AddTask';
 
 import './style.css'
 
@@ -59,7 +60,7 @@ function Index({handleAddTask}) {
       <input placeholder="Add a description" type="text" onChange={onChangeDescription} value={description} className={errors.description ? 'error' : ''}  />
       {errors.description && <div className="error-message">{errors.description}</div>}
 
-      <Button variant="contained" type="submit" className="submitButton"><SendIcon /></Button>
+      <Button variant="contained" type="submit" className="submitButton"><AddTaskIcon /></Button>
       </form>
     </div>
 
