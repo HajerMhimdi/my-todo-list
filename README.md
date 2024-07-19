@@ -9,7 +9,6 @@ Currently, two official plugins are available:
 
 # My To Do List Demo with React + Vite
 
+![My To Do List Demo](https://github.com/HajerMhimdi/my-todo-list/blob/main/AppTuto.gif)
 
-
-![]([https://github.com/Your_Repository_Name/Your_GIF_Name.gif](https://github.com/HajerMhimdi/my-todo-list/blob/main/AppTuto.gif))
 
