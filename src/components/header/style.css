@@ -1,7 +1,7 @@
 .header {
   background: #f4f4f4;
   display: flex;
-  align-items: center;  /* Use center instead of normal */
+  align-items: center;
   justify-content: space-between;
   height: 100px;
   color: #008787;
@@ -12,7 +12,7 @@
 
 .toDoTitle {
   color: #008787;
-  font-size: 2.5rem;  /* Adjust size for better scaling */
+  font-size: 2.5rem;
   font-weight: bold;
 }
 
@@ -27,7 +27,8 @@
   display: inline-block;
 }
 
-.createTasks, .completeTask {
+.createTasks,
+.completeTask {
   font-size: 40px;
 }
 
@@ -51,16 +52,13 @@
   font-weight: bold;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 1200px) {
-
   .toDoTitle {
     font-size: 2.25rem;
   }
 }
 
 @media (max-width: 992px) {
-  
   .toDoTitle {
     font-size: 2rem;
   }
@@ -72,31 +70,24 @@
     font-size: xx-large;
 
   }
+
   .toDoTitle {
     font-size: 1.75rem;
   }
+
   .notification {
-   
     font-size: xx-large;
-    
   }
-  
+
   .completedText {
-
     font-size: xx-large;
-  
   }
-
-
 }
 
 @media (max-width: 576px) {
-
   .toDoTitle {
     font-size: 1.5rem;
   }
-
-
 }
 
 .header span {
