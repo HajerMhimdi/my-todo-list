@@ -3,6 +3,8 @@ import TaskIcon from '@mui/icons-material/Task';
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import Tooltip from '@mui/material/Tooltip';
 
+import { formatTime } from '../../utils/taskTime';
+
 import './style.css';
 
 
@@ -21,6 +23,13 @@ function Task({ task, onDelete, onComplete }) {
         <div className="rowDirection">
           <h5 className="descriptionStyle">Description: {truncateText(task.description, 100)}</h5>
         </div>
+        {task.startDate && (
+          <div className="rowDirection">
+            <h5 className="scheduleStyle">
+              {formatTime(task.startDate)} → {formatTime(task.endDate)} ({task.hours}h)
+            </h5>
+          </div>
+        )}
       </div>
       <div className="task-actions">
         {task.isCompleted ? (

@@ -4,6 +4,17 @@
   padding: 20px;
 }
 
+.fieldLabel {
+  color: #008787;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.hoursPreview {
+  color: #333333;
+  font-size: 0.95rem;
+}
+
 .addTask {
   display: flex;
   flex-direction: column;
