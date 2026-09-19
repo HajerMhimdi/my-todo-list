@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
 }
 
 .dashboardCards {
@@ -51,6 +53,7 @@
   background: #ffffff;
   border-radius: 8px;
   padding: 12px;
+  color: #333333;
 }
 
 .dashboardChartTitle {
