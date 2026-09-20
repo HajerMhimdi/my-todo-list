@@ -33,8 +33,6 @@ npm install
 npm run dev
 ```
 
-The app is then available on http://localhost:5173.
-
 ## Other commands
 
 ```bash
