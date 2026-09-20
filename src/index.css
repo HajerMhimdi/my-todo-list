@@ -25,3 +25,26 @@ body {
   overflow: hidden;
 
 }
+
+.viewTabs {
+  display: flex;
+  gap: 8px;
+  background: #f4f4f4;
+  padding: 8px 14px;
+}
+
+.viewTab {
+  background: transparent;
+  border: 2px solid #008787;
+  border-radius: 999px;
+  color: #008787;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 6px 18px;
+}
+
+.viewTabActive {
+  background: #008787;
+  color: #ffffff;
+}

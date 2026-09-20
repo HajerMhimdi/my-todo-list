@@ -3,6 +3,8 @@ import { useEffect, useState } from "react";
 import Heading from './components/header/heading.jsx';
 import Index from './components/todoForm/index.jsx';
 import TaskList from './components/todoList/TasksList.jsx';
+import Dashboard from './components/dashboard/Dashboard.jsx';
+import { computeHours } from './utils/taskTime.js';
 
 
 
@@ -11,6 +13,7 @@ const LOCAL_STORAGE_KEY = 'todo:tasks';
 
 function App() {
   const [tasks, setTasks] = useState([]);
+  const [view, setView] = useState('tasks');
 
   function getTasks() {
     const storedTasks = localStorage.getItem(LOCAL_STORAGE_KEY);
@@ -28,11 +31,14 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(newTasks));
   }
 
-  function addTask(newTitle, newDescription) {
+  function addTask(newTitle, newDescription, newStartDate, newEndDate) {
     setSavedTasks([...tasks, {
       id: crypto.randomUUID(),
       title: newTitle,
       description: newDescription,
+      startDate: newStartDate,
+      endDate: newEndDate,
+      hours: computeHours(newStartDate, newEndDate),
       isCompleted: false
     }]);
   }
@@ -58,11 +64,30 @@ function App() {
     <>
       <Heading tasks={tasks} />
 
-      <Index handleAddTask={addTask} />
+      <nav className="viewTabs">
+        <button
+          className={`viewTab ${view === 'tasks' ? 'viewTabActive' : ''}`}
+          onClick={() => setView('tasks')}>
+          Tasks
+        </button>
+        <button
+          className={`viewTab ${view === 'dashboard' ? 'viewTabActive' : ''}`}
+          onClick={() => setView('dashboard')}>
+          Dashboard
+        </button>
+      </nav>
 
-      <TaskList tasks={tasks}
-        onDelete={deleteTaskById}
-        onComplete={CompleteTasksById} />
+      {view === 'tasks' ? (
+        <>
+          <Index handleAddTask={addTask} />
+
+          <TaskList tasks={tasks}
+            onDelete={deleteTaskById}
+            onComplete={CompleteTasksById} />
+        </>
+      ) : (
+        <Dashboard tasks={tasks} />
+      )}
     </>
   )
 }

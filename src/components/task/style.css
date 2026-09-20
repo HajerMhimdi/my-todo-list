@@ -35,6 +35,12 @@
   text-overflow: ellipsis;
 }
 
+.scheduleStyle {
+  font-size: 13px;
+  color: #555555;
+  margin: 0;
+}
+
 .checkedButton {
   font-size: xx-large !important;
   color: #008787;
